@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9450EBC1-7BC2-469E-BD13-5D5620A3953E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WaMarketProApp</RootNamespace>
+    <AssemblyName>WaMarketProApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wa.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Krypton.Navigator, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Navigator.70.22.11.312\lib\net48\Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton.Ribbon, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Ribbon.70.22.11.312\lib\net48\Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton.Toolkit, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.70.22.11.312\lib\net48\Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.8.0.0\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUniqueHardwareID, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinkDotNet.NUniqueHardwareID.0.4.1\lib\netstandard2.0\NUniqueHardwareID.dll</HintPath>
+    </Reference>
+    <Reference Include="Sqlite.Db, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Sqlite.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.1.7.2151, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.1.7\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=5.1.4.131, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlSugar.5.1.4.131\lib\SqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wa.Api, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Wa.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Wa.Model, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Wa.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.16.2\lib\netstandard2.0\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildFrom\GroupExtractControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\GroupExtractControl.Designer.cs">
+      <DependentUpon>GroupExtractControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\GroupSendControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\GroupSendControl.Designer.cs">
+      <DependentUpon>GroupSendControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\ReplyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\ReplyControl.Designer.cs">
+      <DependentUpon>ReplyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\JoinGroupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\JoinGroupControl.Designer.cs">
+      <DependentUpon>JoinGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\ReplyMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\ReplyMessageControl.Designer.cs">
+      <DependentUpon>ReplyMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\PhoneSendControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\PhoneSendControl.Designer.cs">
+      <DependentUpon>PhoneSendControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\ContactSendControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\ContactSendControl.Designer.cs">
+      <DependentUpon>ContactSendControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\MessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\MessageControl.Designer.cs">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuth.Designer.cs">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMsgAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMsgAdd.Designer.cs">
+      <DependentUpon>FrmMsgAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReplyMsgAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReplyMsgAdd.designer.cs">
+      <DependentUpon>FrmReplyMsgAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWelcome.Designer.cs">
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ActiveModel.cs" />
+    <Compile Include="Model\FilterResultModel.cs" />
+    <Compile Include="Model\ImportItem.cs" />
+    <Compile Include="Model\LangModel.cs" />
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="ChildFrom\GroupExtractControl.resx">
+      <DependentUpon>GroupExtractControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\GroupSendControl.resx">
+      <DependentUpon>GroupSendControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\ReplyControl.resx">
+      <DependentUpon>ReplyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\JoinGroupControl.resx">
+      <DependentUpon>JoinGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\ReplyMessageControl.resx">
+      <DependentUpon>ReplyMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\PhoneSendControl.resx">
+      <DependentUpon>PhoneSendControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\ContactSendControl.resx">
+      <DependentUpon>ContactSendControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\MessageControl.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAuth.resx">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMsgAdd.resx">
+      <DependentUpon>FrmMsgAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReplyMsgAdd.resx">
+      <DependentUpon>FrmReplyMsgAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWelcome.resx">
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Lang\en.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WaPro.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wa.png" />
+    <None Include="Resources\login-wa.png" />
+    <None Include="Resources\login-wa64.png" />
+    <None Include="Resources\msg-64.png" />
+    <None Include="Resources\filter-64.png" />
+    <None Include="Resources\filter-641.png" />
+    <None Include="Resources\contactsend-64.png" />
+    <None Include="Resources\contactsend-641.png" />
+    <None Include="Resources\extract-64.png" />
+    <None Include="Resources\group-64.png" />
+    <None Include="Resources\bot-message-64.png" />
+    <None Include="Resources\bot-64.png" />
+    <None Include="Resources\phone1-64.png" />
+    <None Include="Resources\group2-64.png" />
+    <None Include="Resources\send1-64.png" />
+    <None Include="Resources\send1-641.png" />
+    <None Include="Resources\join-64.png" />
+    <None Include="Resources\tg-64.png" />
+    <None Include="Resources\data-64.png" />
+    <None Include="Resources\data-641.png" />
+    <None Include="Resources\data-642.png" />
+    <None Include="Resources\tg1-64.png" />
+    <None Include="Resources\wa2-64.png" />
+    <None Include="Resources\envato-64.png" />
+    <None Include="Resources\follow-64.png" />
+    <None Include="Resources\website-64.png" />
+    <None Include="Resources\about-64.png" />
+    <None Include="Resources\tg-16.png" />
+    <None Include="Resources\data-16.png" />
+    <None Include="Resources\tg1-16.png" />
+    <None Include="Resources\wa2-16.png" />
+    <None Include="Resources\envato-16.png" />
+    <None Include="Resources\follow-16.png" />
+    <None Include="Resources\website-16.png" />
+    <None Include="Resources\about-16.png" />
+    <None Include="Resources\login-wa16.png" />
+    <None Include="Resources\msg-16.png" />
+    <None Include="Resources\filter-16.png" />
+    <None Include="Resources\contactsend-16.png" />
+    <None Include="Resources\phone1-16.png" />
+    <None Include="Resources\join-16.png" />
+    <None Include="Resources\group-16.png" />
+    <None Include="Resources\send1-16.png" />
+    <None Include="Resources\bot-message-16.png" />
+    <None Include="Resources\bot-16.png" />
+    <Content Include="System.Data.SQLite.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.4.16.2\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.16.2\build\Selenium.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>http://go.microsoft.com/fwlink/?LinkID=322105</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.16.2\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.16.2\build\Selenium.WebDriver.targets'))" />
+  </Target>
+</Project>
