@@ -91,7 +91,7 @@
     <li><strong>Note:</strong> The License Key Generator module is provided as a compiled tool and does not include source code</li>
 </ul>
 
-<h3>🔹 30+ Languages Supported</h3>
+<h3>🔹 35+ Languages Supported</h3>
 <ul>
     <li>Supports English,العربية,azərbaycan,bosanski, Italiano,Dansk,Deutsch,Français,Português,Español,euskara,Bahasa Indonesia,Bahasa Melayu, Filipino,latviešu,lietuvių,magyar,Nederlands,norsk,oʻzbekcha,Tiếng Việt, ürkçe,हिन्दी,ខ្មែរ,简体中文,繁體中文</li>
     <li>Over 30 languages available for global users</li>
