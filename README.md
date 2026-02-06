@@ -57,7 +57,7 @@
 
 <h3>🔹 Export Group Members</h3>
 <ul>
-    <li>Generate complete group member lists</li>
+    <li>Extract all group member lists</li>
     <li>Use data for CRM, reports, or audience insights</li>
 </ul>
 
